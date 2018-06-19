@@ -1,6 +1,12 @@
 <h1>Sign up!</h1>
 
-<form method="POST" action="{% url 'signup' %}">
+{% if error %}
+{{ error }}
+<br />
+<br />
+{% endif %}
+
+<form method="POST" action="{% url 'useraccounts:signup' %}">
   {% csrf_token %}
   Username:
   <br />
