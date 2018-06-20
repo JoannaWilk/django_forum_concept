@@ -1,4 +1,7 @@
-<h1>Login!</h1>
+{% extends 'base.html' %}
+{% block content %}
+
+<br />
 
 {% if error %}
 {{ error }}
@@ -21,5 +24,8 @@
   <br />
   <input type="password" name="password" />
   <br />
-  <input type="submit" value="Login">
+  <br />
+  <input class="btn btn-secondary" type="submit" value="Login">
 </form>
+
+{% endblock %}
