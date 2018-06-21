@@ -14,7 +14,7 @@ def signup(request):
                 user = User.objects.create_user(username=request.POST['username'],
                                                 password=request.POST['password1'])
                 login(request, user)
-                return render(request, 'useraccounts/signup.html')
+                return redirect('home')
         else:
             return render(request, 'useraccounts/signup.html',
                           {'error': 'Passwords didn\'t match!'})
